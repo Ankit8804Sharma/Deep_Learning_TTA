@@ -1,0 +1,47 @@
+**/__pycache__/
+**/*.pyc
+**/wandb/
+**/embeddings/
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+
+# Local datasets are kept outside git.
+data/*
+!data/README.md
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Local datasets
+hf_data/
+downloads/
+datasets/
+*.h5
+*.hdf5
+*.svs
+
+# Genomic and survival data
+TTA/src/data_csvs/**/*.csv
+TTA/src/splits/**/*.csv
+
+# Generated experiment outputs
+TTA/src/results/
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.log
+logs/
+
+# Credentials and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Windows files
+Thumbs.db
+Desktop.ini
