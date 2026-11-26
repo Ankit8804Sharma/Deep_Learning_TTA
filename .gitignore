@@ -51,3 +51,7 @@ TTA/src/results_fast/
 TTA/src/logs/
 __pycache__/
 *.pyc
+
+# Reproduction experiment outputs
+TTA/src/results_reproduction/
+TTA/src/results_reproduction_5ep/
