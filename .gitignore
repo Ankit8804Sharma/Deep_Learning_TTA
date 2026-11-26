@@ -45,3 +45,9 @@ logs/
 # Windows files
 Thumbs.db
 Desktop.ini
+# Local TTA experiment outputs
+TTA/src/results_smoke/
+TTA/src/results_fast/
+TTA/src/logs/
+__pycache__/
+*.pyc
