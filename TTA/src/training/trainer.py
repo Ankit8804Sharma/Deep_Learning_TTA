@@ -1065,8 +1065,8 @@ def validate_survival(model, loader,
     results.update({'c_index': c_index})
 
     if recompute_loss_at_end and isinstance(loss_fn, CoxLoss):
-        # CoxLoss expects log-risk (logits). We collected risk=exp(logits) above; convert back safely.
-        log_risk = torch.log(torch.tensor(all_risk_scores).clamp_min(1e-12)).unsqueeze(1)
+        # CoxLoss expects log-risk (logits), which were collected directly above.
+        log_risk = torch.tensor(all_risk_scores).unsqueeze(1)
         surv_loss_dict = loss_fn(logits=log_risk,
                                  times=torch.tensor(all_event_times).unsqueeze(1),
                                  censorships=torch.tensor(all_censorships).unsqueeze(1))
